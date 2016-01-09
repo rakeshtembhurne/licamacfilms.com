@@ -1,4 +1,3 @@
-
 <!doctype html>
 <!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
@@ -66,60 +65,43 @@
                                     <h4>What we do</h4>
                                     <p>In the advent of digital age, cinema and TV form part and parcel of urban life culture. While traditional media like print, radio and outdoor advertising retain its fair share, the audio visual medium has grown at profound pace. The medium has given birth to new avenues of audio visual story telling process like short films, ads, documentaries, corporate films. We belong to this space catering to a diversified profile spread across industries..</p>
                                 </div>
-                                                                <div class="tab-pane fade gradient" id="works">
-                                                                    <div class="row">
-                                                                            <div class="col-sm-4">
+                                <?php 
+                                    $films = array(
+                                        array(
+                                            "//www.youtube.com/embed/StZhDC86Co4", // LicaDemoReal
+                                            "//www.youtube.com/embed/wAXx8VlVNP0", // BMA
+                                            "//www.youtube.com/embed/eD2UrQv5NGI", // SBI Wagh
+                                        ),
+                                        array(
+                                            "//www.youtube.com/embed/eDZ_4D5ud0A", // KNMP
+                                            "//www.youtube.com/embed/wwUA6D_9rv0", // Solar fencing
+                                            "//www.youtube.com/embed/BuVo_iUR9Mo", // Cheque of death
+                                        ),
+                                        array(
+                                            "//www.youtube.com/embed/brfkB6JPX_Q", // Clock tower
+                                            "//www.youtube.com/embed/i51ov6gCEHI", // Baba Amte
+                                            "//www.youtube.com/embed/v3QGJSW670A", // A1 Chips
+                                        ),
+                                        array(
+                                            "//www.youtube.com/embed/gXtVBRx-v9c", // Niyati
+                                            //"//www.youtube.com/embed/qtSvcsn7X2Q", // SAM Profile
+                                            //"//www.youtube.com/embed/PFpMxU-n2fs", // Bharat camp
+                                        )
+                                    );
+                                 ?>
+                                <div class="tab-pane fade gradient" id="works">
+                                <?php foreach ($films as $videos): ?>
+                                    <div class="row">
+                                    <?php foreach ($videos as $video): ?>
+                                        <div class="col-sm-4">
                                             <div class="video-container">
-                                                <iframe width="260" height="200" src="//www.youtube.com/embed/StZhDC86Co4?rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe></div>
+                                                <iframe width="260" height="200" src="<?php echo $video; ?>?rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe></div>
                                         </div>
-                                                                            <div class="col-sm-4">
-                                            <div class="video-container">
-                                                <iframe width="260" height="200" src="//www.youtube.com/embed/wAXx8VlVNP0?rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe></div>
-                                        </div>
-                                                                            <div class="col-sm-4">
-                                            <div class="video-container">
-                                                <iframe width="260" height="200" src="//www.youtube.com/embed/eD2UrQv5NGI?rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe></div>
-                                        </div>
-                                                                        </div>
+                                    <?php endforeach ?>
+                                    </div>
                                     <br />
-                                                                    <div class="row">
-                                                                            <div class="col-sm-4">
-                                            <div class="video-container">
-                                                <iframe width="260" height="200" src="//www.youtube.com/embed/eDZ_4D5ud0A?rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe></div>
-                                        </div>
-                                                                            <div class="col-sm-4">
-                                            <div class="video-container">
-                                                <iframe width="260" height="200" src="//www.youtube.com/embed/wwUA6D_9rv0?rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe></div>
-                                        </div>
-                                                                            <div class="col-sm-4">
-                                            <div class="video-container">
-                                                <iframe width="260" height="200" src="//www.youtube.com/embed/BuVo_iUR9Mo?rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe></div>
-                                        </div>
-                                                                        </div>
-                                    <br />
-                                                                    <div class="row">
-                                                                            <div class="col-sm-4">
-                                            <div class="video-container">
-                                                <iframe width="260" height="200" src="//www.youtube.com/embed/brfkB6JPX_Q?rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe></div>
-                                        </div>
-                                                                            <div class="col-sm-4">
-                                            <div class="video-container">
-                                                <iframe width="260" height="200" src="//www.youtube.com/embed/i51ov6gCEHI?rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe></div>
-                                        </div>
-                                                                            <div class="col-sm-4">
-                                            <div class="video-container">
-                                                <iframe width="260" height="200" src="//www.youtube.com/embed/v3QGJSW670A?rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe></div>
-                                        </div>
-                                                                        </div>
-                                    <br />
-                                                                    <div class="row">
-                                                                            <div class="col-sm-4">
-                                            <div class="video-container">
-                                                <iframe width="260" height="200" src="//www.youtube.com/embed/gXtVBRx-v9c?rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe></div>
-                                        </div>
-                                                                        </div>
-                                    <br />
-                                                                </div>
+                                <?php endforeach ?>
+                                </div>
                                 <div class="tab-pane fade gradient" id="testimonials">
                                     <h4>What our customers say about us</h4>
                                     <div class="comment-list clearfix hide" id="comments">
@@ -196,7 +178,7 @@
 
             <div class="row">
                 <div class="col-sm-12 center">
-                    <small class="">&copy; 2013-2016 Licamac Films</small>
+                    <small class="">&copy; 2013-2014 Licamac Films</small>
                 </div>
             </div>
 
